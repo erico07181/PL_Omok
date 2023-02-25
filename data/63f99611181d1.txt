@@ -1,0 +1,1 @@
+{"game_id":"63f99611181d1","strat":"Random","board":{"strat":null,"size":null,"pid":null,"board":[],"winner_row":[]}}
