@@ -1,8 +1,8 @@
 <?php
 
-include __DIR__ . "Game.php";
-include __DIR__ . "Board.php";
-include __DIR__ . "Move.php";
+require_once('Game.php');
+require_once('Board.php');
+require_once('Move.php');
 
 
 
