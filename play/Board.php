@@ -35,6 +35,14 @@ class Board
         }
         return 0;
     }
+
+    function update_game($game_id)
+    {
+        $path = "../data" . $game_id . ".txt";
+        $file = fopen($path, "w") or die("File is unavailable");
+        fwrite($file, json_encode($this));
+        fclose($file);
+    }
 }
 
 ?>

@@ -27,7 +27,7 @@ function game_file_store($path, $txt)
 if (in_array($strategy, $strategies)) {
     $new_board = new Board(15);
     $new_game = new Game($game_id, $strategy, $new_board);
-    game_file_store($new_game->game_id, $new_game->json());
+    game_file_store($new_game->game_id, json_encode($new_game));
     echo json_encode(array("response" => "true", "PID" => $game_id));
 } else {
     echo json_encode(array("response" => false, "reason" => "Strategy not available"));
