@@ -14,15 +14,16 @@ class RandomStrategy extends MoveStrategy
             $x = rand(0, 14);
             $y = rand(0, 14);
 
-            if ($board->getTile($x, $y) == "-") {
+            if ($board->getTile($x, $y) == 0) {
                 //Change so it keeps track of current player
-                $board->placeTile(2, $x, $y);
+                $board->placeTile($x, $y);
 
                 $isAvailableTile = true;
             }
 
         }
         return array($x, $y);
+
 
     }
 
