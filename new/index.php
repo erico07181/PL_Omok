@@ -30,7 +30,7 @@ if (in_array($strategy, $strategies)) {
     // $new_game = new Game()
     // game_file_store($new_game->game_id, json_encode($new_game));
     game_file_store($game_id, json_encode(array("game_id" => $game_id, "strat" => $strategy, "board" => $new_board)));
-    echo json_encode(array("response" => "true", "PID" => $game_id));
+    echo json_encode(array("response" => true, "pid" => $game_id));
 } else {
     echo json_encode(array("response" => false, "reason" => "Strategy not available"));
 
